@@ -4,6 +4,7 @@ body {
 	padding: 0;
 	height: 100%;
 	width: 100%;
+	background-color: snow;
 }
 
 main,
@@ -14,17 +15,24 @@ main,
 }
 
 .element {
-	font-size: clamp(30px, 4vw, 60px);
-	border-radius: 100%;
+	font-size: clamp(24px, 4vw, 60px);
 	position: absolute;
-	width: fit-content;
-	height: fit-content;
-	position: absolute;
+	aspect-ratio: 1 / 1;
+	width: min-content;
+	height: min-content;
+	margin: 0;
+	padding: 0;
 }
 
-.rock {
+.rock::before {
+	content: '🪨';
+	border-radius: 100%;
 }
-.paper {
+.paper::before {
+	content: '📜';
+	border-radius: 100%;
 }
-.scissors {
+.scissors::before {
+	content: '✂️';
+	border-radius: 100%;
 }
