@@ -1,0 +1,43 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+main,
+#battleZone {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.rock {
+	background-color: gray;
+	font-size: 45px;
+	border-radius: 100%;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+}
+.paper {
+	background-color: white;
+	font-size: 45px;
+	border-radius: 100%;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+}
+.scissors {
+	background-color: red;
+	font-size: 45px;
+	border-radius: 100%;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+}

@@ -1,1 +1,1 @@
-# RockPaperScissorsBattle
+# Rock-Paper-Scissors-Battle
