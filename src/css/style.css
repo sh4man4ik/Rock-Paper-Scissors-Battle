@@ -11,33 +11,20 @@ main,
 	display: flex;
 	height: 100%;
 	width: 100%;
+}
+
+.element {
+	font-size: clamp(30px, 4vw, 60px);
+	border-radius: 100%;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
 	position: absolute;
 }
 
 .rock {
-	background-color: gray;
-	font-size: 45px;
-	border-radius: 100%;
-	position: absolute;
-	width: fit-content;
-	height: fit-content;
-	position: absolute;
 }
 .paper {
-	background-color: white;
-	font-size: 45px;
-	border-radius: 100%;
-	position: absolute;
-	width: fit-content;
-	height: fit-content;
-	position: absolute;
 }
 .scissors {
-	background-color: red;
-	font-size: 45px;
-	border-radius: 100%;
-	position: absolute;
-	width: fit-content;
-	height: fit-content;
-	position: absolute;
 }
