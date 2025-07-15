@@ -10,6 +10,46 @@
 		<header></header>
 
 		<main>
+			<div id="form">
+				<div id="title">Rock-Paper-Scissors Battle</div>
+
+				<input
+					type="text"
+					placeholder="Rocks (0-99)"
+					name="rocks"
+					class="input"
+					id="rockNumber"
+					min="1"
+					max="25"
+					maxlength="2"
+					onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+				/>
+				<input
+					type="text"
+					placeholder="Papers (0-99)"
+					name="papers"
+					class="input"
+					id="paperNumber"
+					min="1"
+					max="25"
+					maxlength="2"
+					onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+				/>
+
+				<input
+					type="text"
+					placeholder="Scissors (0-99)"
+					name="scissors"
+					id="scissorsNumber"
+					class="input"
+					min="1"
+					max="25"
+					maxlength="2"
+					onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+				/>
+
+				<button id="button-confirm" onclick="start()">START</button>
+			</div>
 			<div id="battleZone"></div>
 		</main>
 

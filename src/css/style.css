@@ -36,3 +36,88 @@ main,
 	content: '✂️';
 	border-radius: 100%;
 }
+
+#form {
+	--input-focus: #2d8cf0;
+	--font-color: #323232;
+	--font-color-sub: #666;
+	--bg-color: #fff;
+	--main-color: #323232;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background: lightgrey;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	border-radius: 5px;
+	border: 2px solid var(--main-color);
+	box-shadow: 4px 4px var(--main-color);
+	height: min-content;
+	max-width: 300px;
+	width: 60%;
+	font-family: Arial, sans-serif;
+}
+
+#title {
+	color: var(--font-color);
+	font-weight: 900;
+	font-size: clamp(14px, 6vw, 20px);
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.input {
+	width: 80%;
+	height: clamp(20px, 4vw, 40px);
+	border-radius: 5px;
+	border: 2px solid var(--main-color);
+	background-color: var(--bg-color);
+	box-shadow: 4px 4px var(--main-color);
+	font-size: clamp(10px, 4vw, 15px);
+	font-weight: 600;
+	color: var(--font-color);
+	padding: 5px 10px;
+	outline: none;
+}
+
+.input::placeholder {
+	color: var(--font-color-sub);
+	opacity: 0.8;
+}
+
+.input:focus {
+	border: 2px solid var(--input-focus);
+}
+
+#button-confirm:active {
+	box-shadow: 0px 0px var(--main-color);
+	transform: translate(3px, 3px);
+}
+
+#button-confirm {
+	margin: 30px auto 0 auto;
+	width: clamp(50px, 22vw, 120px);
+	height: clamp(20px, 10vw, 40px);
+	border-radius: 5px;
+	border: 2px solid var(--main-color);
+	background-color: var(--bg-color);
+	box-shadow: 4px 4px var(--main-color);
+	font-size: clamp(8px, 4vw, 17px);
+	font-weight: 600;
+	color: var(--font-color);
+	cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+	#button-confirm {
+		margin: 15px auto 0 auto;
+	}
+	#title {
+		margin-bottom: 7px;
+	}
+}

@@ -42,15 +42,15 @@ function randomSpeed() {
 	let randomSpeed;
 
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		randomSpeed = Math.random() * 2 - 1;
-
-		if (randomSpeed < 0.3 && randomSpeed > -0.3) {
-			randomSpeed = Math.random() < 0.5 ? 1 : -1;
-		}
-	} else {
-		randomSpeed = Math.random() * 1.6 - 0.8;
+		randomSpeed = Math.random() * (0.6 - -0.6) + -0.6;
 
 		if (randomSpeed < 0.1 && randomSpeed > -0.1) {
+			randomSpeed = Math.random() < 0.5 ? 0.4 : -0.4;
+		}
+	} else {
+		randomSpeed = Math.random() * (0.8 - -0.8) + -0.8;
+
+		if (randomSpeed < 0.2 && randomSpeed > -0.2) {
 			randomSpeed = Math.random() < 0.5 ? 0.8 : -0.8;
 		}
 	}
@@ -194,16 +194,17 @@ function checkContact(element1, element2) {
 
 	let radiusSum = element1.clientWidth / 2 + element2.clientWidth / 2;
 
-	return distance + 5 < radiusSum;
+	if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		distance += 10;
+	} else {
+		distance -= 5;
+	}
+
+	return distance < radiusSum;
 }
 
 //start
-function createElements() {
-	//1-25
-	let rockNumber = 25;
-	let paperNumber = 25;
-	let scissorsNumber = 25;
-
+function createElements(rockNumber, paperNumber, scissorsNumber) {
 	for (let i = 0; i < rockNumber; i++) {
 		createRock();
 	}
@@ -216,4 +217,24 @@ function createElements() {
 
 	animate();
 }
-createElements();
+
+function start() {
+	let rockNumber = document.getElementById('rockNumber').value;
+	if (rockNumber == '') {
+		rockNumber = 0;
+	}
+
+	let paperNumber = document.getElementById('paperNumber').value;
+	if (paperNumber == '') {
+		paperNumber = 0;
+	}
+
+	let scissorsNumber = document.getElementById('scissorsNumber').value;
+	if (scissorsNumber == '') {
+		scissorsNumber = 0;
+	}
+
+	document.getElementById('form').style.display = 'none';
+
+	createElements(rockNumber, paperNumber, scissorsNumber);
+}
