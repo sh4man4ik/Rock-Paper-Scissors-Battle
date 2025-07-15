@@ -1,5 +1,7 @@
 # What is it?
 
+![Screenshot](./Screenshots/Screenshot_1.png)
+
 It's a game where you can choose how many rocks, papers and scissors you have and then the battle begins. The rules are
 the same as the regular game. Rock beats scissors, scissors beats paper, paper beats rock.
 
