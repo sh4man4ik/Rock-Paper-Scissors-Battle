@@ -15,7 +15,7 @@ https://battle-rock-paper-scissors.netlify.app
 
 # Source Code
 
-All code is publicly available in this repository.There are also **eslint** and **prettier** configuration files in the
+All code is publicly available in this repository. There are also **eslint** and **prettier** configuration files in the
 repository, you can replace them with your own. But don't forget to install the dependencies with the `npm install`
 command.
 
