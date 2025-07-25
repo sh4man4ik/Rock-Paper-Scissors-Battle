@@ -7,11 +7,7 @@ the same as the regular game. Rock beats scissors, scissors beats paper, paper b
 
 # Quick Start
 
-The site can be accessed at
-
-```
-https://battle-rock-paper-scissors.netlify.app
-```
+The site can be accessed at https://battle-rock-paper-scissors.netlify.app
 
 # Source Code
 
